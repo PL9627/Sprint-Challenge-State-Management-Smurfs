@@ -4,7 +4,13 @@ import axios from "axios";
 import { getSmurf } from "../actions/smurfActions";
 
 const getForm = (props) => {
-  return <div></div>;
+    useEffect(() => {
+        
+    })
+
+  return (
+  <div></div>
+  );
 };
 
 export default getForm;
