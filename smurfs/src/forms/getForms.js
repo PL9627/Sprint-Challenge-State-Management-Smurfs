@@ -5,7 +5,9 @@ import { getSmurf } from "../actions/smurfActions";
 
 const getForm = (props) => {
     useEffect(() => {
-        
+        axios.get("http://localhost:3333/smurfs")
+        .then(res => console.log(res))
+        .catch(err => console.log('getForm axios err', err));
     })
 
   return (
