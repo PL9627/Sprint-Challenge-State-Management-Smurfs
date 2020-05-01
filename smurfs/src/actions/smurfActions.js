@@ -1,0 +1,2 @@
+const OBTAIN_SMURF = 'OBTAIN_SMURF';
+const GET_SMURF = 'GET_SMURF';
