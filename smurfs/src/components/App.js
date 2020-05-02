@@ -1,8 +1,12 @@
-import React, { Component } from "react";
+import React, { useState, useContext } from "react";
 import "./App.css";
+import axios from 'axios';
 
-class App extends Component {
-  render() {
+
+const App = () => {
+  const [smurf, setSmurf] = useState([]);
+
+  
     return (
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
@@ -11,7 +15,6 @@ class App extends Component {
         <div>Have fun!</div>
       </div>
     );
-  }
 }
 
 export default App;
