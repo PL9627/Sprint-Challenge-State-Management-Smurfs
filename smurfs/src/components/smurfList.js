@@ -10,4 +10,8 @@ const SmurfList = () => {
         age: "",
         height: ""
     })
+
+    const changeHandler = (event) => {
+        
+    }
 }
