@@ -10,20 +10,20 @@ const obtainForm = (props) => {
 
   const [height, setHeight] = useState({});
 
-  const ageChangeHandler = (e) => {
-    setAge({});
+  const ageChangeHandler = (event) => {
+    setAge({age: event.target.value});
   };
 
-  const nameChangeHandler = (e) => {
+  const nameChangeHandler = (event) => {
       setName({});
   };
 
-  const heightChangeHandler = (e) => {
+  const heightChangeHandler = (event) => {
       setHeight({});
   };
 
-  const handleSubmit = (e) => {
-      e.preventDefault();
+  const handleSubmit = (event) => {
+      event.preventDefault();
   };
 
   return (
