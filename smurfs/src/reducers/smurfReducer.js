@@ -10,10 +10,16 @@ const initialState = [
 
 const smurfReducer = (state = initialState, action) => {
   switch (action.type) {
-      case OBTAIN_SMURF:
-          return {
-            ...state, smurfs: action.payload
-          };
+    case OBTAIN_SMURF:
+      return {
+        ...state,
+        smurfs: action.payload,
+      };
+    case GET_SMURF:
+      return {
+        ...state,
+        smurfs: action.payload,
+      };
     default:
       return state;
   }
