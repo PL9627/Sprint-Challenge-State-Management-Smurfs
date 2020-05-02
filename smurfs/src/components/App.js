@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
+
+import ObtainForm from '../forms/obtainForm';
+import GetForm from '../forms/getForms';
+
 class App extends Component {
   render() {
     return (

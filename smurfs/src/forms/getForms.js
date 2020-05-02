@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import axios from "axios";
 import { getSmurf } from "../actions/smurfActions";
 
-const getForm = (props) => {
+const GetForm = (props) => {
   useEffect(() => {
     axios
       .get("http://localhost:3333/smurfs")
@@ -40,4 +40,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getSmurf })(getForm);
+export default connect(mapStateToProps, { getSmurf })(GetForm);

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import axios from "axios";
 import { obtainSmurf } from "../actions/smurfActions";
 
-const obtainForm = (props) => {
+const ObtainForm = (props) => {
   const [name, setName] = useState({});
 
   const [age, setAge] = useState({});
@@ -64,10 +64,10 @@ const obtainForm = (props) => {
   );
 };
 
-mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     state: state,
   };
 };
 
-export default connect(mapStateToProps, { obtainSmurf })(obtainForm);
+export default connect(mapStateToProps, { obtainSmurf })(ObtainForm);
