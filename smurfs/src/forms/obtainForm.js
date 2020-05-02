@@ -27,7 +27,7 @@ const obtainForm = (props) => {
   };
 
   return (
-    <div className="obtainForm" onSubmit={}>
+    <div className="obtainForm" onSubmit={handleSubmit}>
       <form>
         <input
           name="name"
