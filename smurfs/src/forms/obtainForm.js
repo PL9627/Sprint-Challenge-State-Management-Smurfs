@@ -65,9 +65,9 @@ const obtainForm = (props) => {
 };
 
 mapStateToProps = (state) => {
-    return {
-        state: state,
-    }
-}
+  return {
+    state: state,
+  };
+};
 
-export default obtainForm;
+export default connect(mapStateToProps, { obtainSmurf })(obtainForm);
