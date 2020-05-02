@@ -40,4 +40,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default getForm;
+export default connect(mapStateToProps, { getSmurf })(getForm);
