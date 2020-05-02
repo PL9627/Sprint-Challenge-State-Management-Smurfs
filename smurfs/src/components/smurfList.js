@@ -16,4 +16,10 @@ const SmurfList = () => {
             ...smurfCard, [event.target.name]: event.target.value
         })
     }
+
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        
+    }
 }
