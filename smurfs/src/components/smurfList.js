@@ -4,22 +4,10 @@ import {SmurfCard} from './SmurfCard';
 
 const SmurfList = () => {
     const {smurfs} = useContext(SmurfContext);
-
-    const [smurfCard, setsmurfCard] = useState({
-        name: "",
-        age: "",
-        height: ""
-    })
-
-    const changeHandler = (event) => {
-        setsmurfCard({
-            ...smurfCard, [event.target.name]: event.target.value
-        })
-    }
-
-    const submitHandler = (event) => {
-        event.preventDefault();
-
-        
-    }
+   
+    return (
+        <div className="smurfList">
+            
+        </div>
+    )
 }
