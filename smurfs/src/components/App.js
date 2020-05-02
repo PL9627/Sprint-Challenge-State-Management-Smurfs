@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
 
@@ -6,7 +6,9 @@ import axios from 'axios';
 const App = () => {
   const [smurf, setSmurf] = useState([]);
 
-  
+  useEffect(() => {
+    
+  })
     return (
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
