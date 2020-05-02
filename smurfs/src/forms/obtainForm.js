@@ -25,7 +25,12 @@ const obtainForm = (props) => {
           onChange={}
           placeholder="Type smurf age here..."
         />
-        <input />
+        <input
+          name="height"
+          type="text"
+          onChange={}
+          placeholder="Type smurf height here..."
+        />
       </form>
     </div>
   );
