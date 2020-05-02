@@ -15,11 +15,11 @@ const obtainForm = (props) => {
   };
 
   const nameChangeHandler = (event) => {
-      setName({});
+      setName({name: event.target.value});
   };
 
   const heightChangeHandler = (event) => {
-      setHeight({});
+      setHeight({height: event.target.value});
   };
 
   const handleSubmit = (event) => {
