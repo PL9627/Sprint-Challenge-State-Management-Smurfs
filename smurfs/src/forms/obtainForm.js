@@ -5,6 +5,9 @@ import { obtainSmurf } from "../actions/smurfActions";
 
 const obtainForm = (props) => {
   const [name, setName] = useState({});
+
+  const [age, setAge] = useState({});
+
   return (
     <div>
       <div></div>
