@@ -11,19 +11,28 @@ const obtainForm = (props) => {
   const [height, setHeight] = useState({});
 
   const ageChangeHandler = (event) => {
-    setAge({age: event.target.value});
+    setAge({ age: event.target.value });
   };
 
   const nameChangeHandler = (event) => {
-      setName({name: event.target.value});
+    setName({ name: event.target.value });
   };
 
   const heightChangeHandler = (event) => {
-      setHeight({height: event.target.value});
+    setHeight({ height: event.target.value });
   };
 
   const handleSubmit = (event) => {
-      event.preventDefault();
+    event.preventDefault();
+
+    axios
+      .post()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log("handleSubmit err in obtainForm", err);
+      });
   };
 
   return (
