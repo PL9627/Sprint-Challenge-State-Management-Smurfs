@@ -31,6 +31,7 @@ const obtainForm = (props) => {
           onChange={}
           placeholder="Type smurf height here..."
         />
+        <button type="submit">Create New Smurf</button>
       </form>
     </div>
   );
