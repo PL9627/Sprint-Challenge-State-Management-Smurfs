@@ -25,4 +25,10 @@ const SmurfForm = () => {
         height: ""
     })
   };
+
+  return (
+      <div className="smurfForm">
+          
+      </div>
+  )
 };
