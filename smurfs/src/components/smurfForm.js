@@ -28,7 +28,9 @@ const SmurfForm = () => {
 
   return (
       <div className="smurfForm">
-          
+          <form onSubmit={submitHandler}>
+
+          </form>
       </div>
   )
 };
