@@ -23,7 +23,7 @@ const obtainForm = (props) => {
   }
 
   return (
-    <div className="obtainForm">
+    <div className="obtainForm" onSubmit={}>
       <form>
         <input
           name="name"
