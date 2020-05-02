@@ -34,8 +34,10 @@ const getForm = (props) => {
   );
 };
 
-const mapStateToProps = state => {
-    return 
-}
+const mapStateToProps = (state) => {
+  return {
+    state,
+  };
+};
 
 export default getForm;
