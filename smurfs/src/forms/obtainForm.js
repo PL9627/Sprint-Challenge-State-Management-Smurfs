@@ -32,19 +32,19 @@ const obtainForm = (props) => {
         <input
           name="name"
           type="text"
-          onChange={}
+          onChange={nameChangeHandler}
           placeholder="Type smurf name here..."
         />
         <input
           name="age"
           type="number"
-          onChange={}
+          onChange={ageChangeHandler}
           placeholder="Type smurf age here..."
         />
         <input
           name="height"
           type="text"
-          onChange={}
+          onChange={heightChangeHandler}
           placeholder="Type smurf height here..."
         />
         <button type="submit">Create New Smurf</button>
