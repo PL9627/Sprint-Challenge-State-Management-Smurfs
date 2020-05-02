@@ -26,7 +26,7 @@ const obtainForm = (props) => {
     event.preventDefault();
 
     axios
-      .post()
+      .post("http://localhost:3333/smurfs")
       .then((res) => {
         console.log(res);
       })
