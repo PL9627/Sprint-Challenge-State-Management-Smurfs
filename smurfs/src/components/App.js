@@ -15,7 +15,10 @@ const App = () => {
   }, {});
 
   const addSmurf = (props) => {
-    
+    axios
+      .post("http://localhost:3333/smurfs")
+      .then((res) => console.log(res))
+      .catch((err) => console.log("addSmurf axios err", err));
   };
 
   return (
