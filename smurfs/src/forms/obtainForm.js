@@ -29,6 +29,8 @@ const obtainForm = (props) => {
       .post("http://localhost:3333/smurfs")
       .then((res) => {
         console.log(res);
+
+        props.obtainSmurf(res.data);
       })
       .catch((err) => {
         console.log("handleSubmit err in obtainForm", err);
