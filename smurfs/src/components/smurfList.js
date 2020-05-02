@@ -12,6 +12,8 @@ const SmurfList = () => {
     })
 
     const changeHandler = (event) => {
-        
+        setsmurfCard({
+            ...smurfCard, [event.target.name]: event.target.value
+        })
     }
 }
