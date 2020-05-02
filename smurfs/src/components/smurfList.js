@@ -1,9 +1,13 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {SmurfContext} from '../smurfContext/smurfContext';
 import {SmurfCard} from './SmurfCard';
 
 const SmurfList = () => {
     const {smurfs} = useContext(SmurfContext);
 
-    
+    const [smurfCard, setsmurfCard] = useState({
+        name: "",
+        age: "",
+        height: ""
+    })
 }
