@@ -20,23 +20,37 @@ const SmurfForm = () => {
     props.addSmurf(smurfForm);
 
     setsmurfForm({
-        name: "",
-        age: "",
-        height: ""
-    })
+      name: "",
+      age: "",
+      height: "",
+    });
   };
 
   return (
-      <div className="smurfForm">
-          <form onSubmit={submitHandler}>
-            <input type="text"
-            name="name"
-            onChange={changeHandler}
-            value={smurfForm.name}
-            placeholder="Type smurf name here..."/>
-            <input />
-            <input />
-          </form>
-      </div>
-  )
+    <div className="smurfForm">
+      <form onSubmit={submitHandler}>
+        <input
+          type="text"
+          name="name"
+          onChange={changeHandler}
+          value={smurfForm.name}
+          placeholder="Type smurf name here..."
+        />
+        <input
+          type="text"
+          name="age"
+          onChange={changeHandler}
+          value={smurfForm.age}
+          placeholder="Type smurf age here..."
+        />
+        <input
+          type="text"
+          name="height"
+          onChange={changeHandler}
+          value={smurfForm.height}
+          placeholder="Type smurf height here..."
+        />
+      </form>
+    </div>
+  );
 };
