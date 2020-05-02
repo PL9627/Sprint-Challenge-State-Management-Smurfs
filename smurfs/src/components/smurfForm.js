@@ -29,7 +29,11 @@ const SmurfForm = () => {
   return (
       <div className="smurfForm">
           <form onSubmit={submitHandler}>
-            <input />
+            <input type="text"
+            name="name"
+            onChange={changeHandler}
+            value={smurfForm.name}
+            placeholder="Type smurf name here..."/>
             <input />
             <input />
           </form>
