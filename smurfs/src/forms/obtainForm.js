@@ -8,6 +8,8 @@ const obtainForm = (props) => {
 
   const [age, setAge] = useState({});
 
+  const [height, setHeight] = useState({});
+
   return (
     <div>
       <div></div>
