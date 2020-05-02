@@ -11,8 +11,13 @@ const obtainForm = (props) => {
   const [height, setHeight] = useState({});
 
   return (
-    <div>
-      <div></div>
+    <div className="obtainForm">
+      <form>
+          <input/>
+          <input/>
+          <input/>
+          <input/>
+      </form>
     </div>
   );
 };
