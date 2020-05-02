@@ -2,9 +2,10 @@ import { GET_SMURF, OBTAIN_SMURF } from "../actions/smurfActions";
 
 const initialState = [
   {
-    name: "",
-    age: 0,
-    height: "0cm",
+    name: "Brainey",
+    age: 200,
+    height: "5cm",
+    id: 1
   },
 ];
 

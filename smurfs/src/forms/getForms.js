@@ -8,7 +8,7 @@ const GetForm = (props) => {
     axios
       .get("http://localhost:3333/smurfs")
       .then((res) => {
-        console.log(res);
+        //console.log(res);
 
         props.getSmurf(res.data);
       })

@@ -3,12 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App";
 
-import { createStore, applyMiddleware } from "redux";
+import { createStore } from "redux";
 import { Provider } from "react-redux";
 import smurfReducer from "./reducers/smurfReducer";
-import thunk from 'thunk';
 
-const store = createStore(smurfReducer, applyMiddleware(thunk));
+const store = createStore(smurfReducer);
 
 ReactDOM.render(
   <Provider store={store}>
