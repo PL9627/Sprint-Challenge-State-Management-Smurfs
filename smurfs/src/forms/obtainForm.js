@@ -20,7 +20,11 @@ const obtainForm = (props) => {
 
   const heightChangeHandler = (e) => {
       setHeight({});
-  }
+  };
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+  };
 
   return (
     <div className="obtainForm" onSubmit={}>
