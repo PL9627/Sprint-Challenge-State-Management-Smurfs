@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddSmurf = (props) => {
+const SmurfCard = (props) => {
   return (
     <div>
       <p>{props.smurf.name}</p>
@@ -10,4 +10,4 @@ const AddSmurf = (props) => {
   );
 };
 
-export default AddSmurf;
+export default SmurfCard;
