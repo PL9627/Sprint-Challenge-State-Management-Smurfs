@@ -10,6 +10,10 @@ const obtainForm = (props) => {
 
   const [height, setHeight] = useState({});
 
+  const ageChangeHandler = (e) => {
+
+  };
+
   return (
     <div className="obtainForm">
       <form>
