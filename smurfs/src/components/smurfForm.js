@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SmurfForm = () => {
+const SmurfForm = (props) => {
   const [smurfForm, setsmurfForm] = useState({
     name: "",
     age: "",
@@ -50,7 +50,10 @@ const SmurfForm = () => {
           value={smurfForm.height}
           placeholder="Type smurf height here..."
         />
+        <button type="submit">Create New Smurf</button>
       </form>
     </div>
   );
 };
+
+export default SmurfForm;
