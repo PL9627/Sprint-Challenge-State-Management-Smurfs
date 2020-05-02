@@ -17,3 +17,6 @@ const SmurfList = () => {
     </div>
   );
 };
+
+
+export default SmurfList;

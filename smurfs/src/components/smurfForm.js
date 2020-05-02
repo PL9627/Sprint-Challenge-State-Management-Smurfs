@@ -1,18 +1,15 @@
-import React, { useContext, useState } from "react";
-import { SmurfContext } from "../smurfContext/smurfContext";
+import React, { useState } from "react";
 
-const SmurfList = () => {
-  const { smurfs } = useContext(SmurfContext);
-
-  const [smurfCard, setsmurfCard] = useState({
+const SmurfForm = () => {
+  const [smurfForm, setsmurfForm] = useState({
     name: "",
     age: "",
     height: "",
   });
 
   const changeHandler = (event) => {
-    setsmurfCard({
-      ...smurfCard,
+    setsmurfForm({
+      ...smurfForm,
       [event.target.name]: event.target.value,
     });
   };
@@ -20,6 +17,12 @@ const SmurfList = () => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    
+    props.addSmurf(smurfForm);
+
+    setsmurfForm({
+        name: "",
+        age: "",
+        height: ""
+    })
   };
 };
