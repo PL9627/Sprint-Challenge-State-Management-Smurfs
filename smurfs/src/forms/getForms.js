@@ -36,7 +36,7 @@ const getForm = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    state,
+    state: state,
   };
 };
 

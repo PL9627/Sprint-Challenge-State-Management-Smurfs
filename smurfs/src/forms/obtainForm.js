@@ -64,4 +64,10 @@ const obtainForm = (props) => {
   );
 };
 
+mapStateToProps = (state) => {
+    return {
+        state: state,
+    }
+}
+
 export default obtainForm;
