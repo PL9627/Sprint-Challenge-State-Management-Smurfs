@@ -1,16 +1,16 @@
-const OBTAIN_SMURF = "OBTAIN_SMURF";
-const GET_SMURF = "GET_SMURF";
+export const OBTAIN_SMURF = "OBTAIN_SMURF";
+export const GET_SMURF = "GET_SMURF";
 
-export const obtainSmurf = (res) => {
+export const obtainSmurf = (props) => {
   return {
     type: OBTAIN_SMURF,
-    payload: res,
+    payload: props,
   };
 };
 
-export const getSmurf = (props) => {
+export const getSmurf = (res) => {
   return {
     type: GET_SMURF,
-    payload: props,
+    payload: res,
   };
 };
