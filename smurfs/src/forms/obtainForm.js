@@ -26,10 +26,8 @@ const ObtainForm = (props) => {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3333/smurfs")
+      .post("http://localhost:3333/smurfs", { ...name, ...age, ...height })
       .then((res) => {
-        console.log(res);
-
         props.obtainSmurf(res.data);
       })
       .catch((err) => {
@@ -38,8 +36,8 @@ const ObtainForm = (props) => {
   };
 
   return (
-    <div className="obtainForm" onSubmit={handleSubmit}>
-      <form>
+    <div className="obtainForm">
+      <form onSubmit={handleSubmit}>
         <input
           name="name"
           type="text"
@@ -66,7 +64,7 @@ const ObtainForm = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    state: state,
+    state,
   };
 };
 

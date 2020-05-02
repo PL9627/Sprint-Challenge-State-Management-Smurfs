@@ -5,7 +5,7 @@ import App from "./components/App";
 
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import smurfReducer from "./reducers/smurfReducer";
+import { smurfReducer } from "./reducers/smurfReducer";
 
 const store = createStore(smurfReducer);
 
