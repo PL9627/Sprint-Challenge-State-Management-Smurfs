@@ -15,7 +15,23 @@ const getForm = (props) => {
       .catch((err) => console.log("getForm axios err", err));
   });
 
-  return <div></div>;
+  return (
+    <div className="getForm">
+      <h1>Smurf Form</h1>
+
+      {props.smurfs
+        ? props.smurfs.map((smurf) => {
+            return (
+              <div key={smurf.id}>
+                <p>{smurf.name}</p>
+                <p>{smurf.age}</p>
+                <p>{smurf.height}</p>
+              </div>
+            );
+          })
+        : null}
+    </div>
+  );
 };
 
 export default getForm;
