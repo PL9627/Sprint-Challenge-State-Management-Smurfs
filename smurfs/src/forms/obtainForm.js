@@ -13,16 +13,19 @@ const obtainForm = (props) => {
   return (
     <div className="obtainForm">
       <form>
-          <input name='name'
+        <input
+          name="name"
           type="text"
           onChange={}
-          placeholder="Type smurf name here..."/>
-          <input name="age"
+          placeholder="Type smurf name here..."
+        />
+        <input
+          name="age"
           type="number"
           onChange={}
-          placeholder="Type smurf age here..."/>
-          <input/>
-          <input/>
+          placeholder="Type smurf age here..."
+        />
+        <input />
       </form>
     </div>
   );
