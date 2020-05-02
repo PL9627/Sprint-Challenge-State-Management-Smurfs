@@ -17,7 +17,10 @@ const obtainForm = (props) => {
           type="text"
           onChange={}
           placeholder="Type smurf name here..."/>
-          <input/>
+          <input name="age"
+          type="number"
+          onChange={}
+          placeholder="Type smurf age here..."/>
           <input/>
           <input/>
       </form>
