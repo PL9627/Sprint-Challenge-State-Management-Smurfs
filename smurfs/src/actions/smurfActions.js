@@ -16,11 +16,40 @@ export const fetchSmurf = () => (dispatch) => {
     .then((res) => {
       console.log(res);
 
-      dispatch({ type: SMURF_FETCH_SUCCESS, payload: res.data });
+      dispatch({
+        type: SMURF_FETCH_SUCCESS,
+        payload: res.data,
+      });
     })
-    .catch((err) => console.log("actions fetch err", err));
+    .catch((err) => {
+      console.log("actions fetch err", err);
+
+      dispatch({
+        type: SMURF_FETCH_FAIL,
+        payload: err.response,
+      });
+    });
 };
 
-export const postSmurf = () => (dispatch) => {
-    dispatch({type: SMURF_POST_START});
-}
+export const postSmurf = (smurfs) => (dispatch) => {
+  dispatch({ type: SMURF_POST_START });
+
+  axios
+    .post("http://localhost:3333/smurfs", smurfs)
+    .then((res) => {
+      console.log(res);
+
+      dispatch({
+        type: SMURF_POST_SUCCESS,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      console.log("actions axios post err", err);
+
+      dispatch({
+        type: SMURF_POST_FAIL,
+        payload: err.response,
+      });
+    });
+};
