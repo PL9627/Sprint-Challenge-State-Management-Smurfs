@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { SmurfContext } from "../smurfContext/smurfContext";
+/* import React, { useContext } from "react";
+
 import SmurfCard from "./SmurfCard";
 
 const SmurfList = () => {
@@ -10,8 +10,8 @@ const SmurfList = () => {
       <h1>Smurf Form</h1>
 
       <div>
-        {smurf.map((smurf) => (
-          <SmurfCard key={smurf.id} smurf={smurf} />
+        {smurf.map((smurfs) => (
+          <SmurfCard key={smurfs.id} smurfs={smurfs} />
         ))}
       </div>
     </div>
@@ -19,3 +19,4 @@ const SmurfList = () => {
 };
 
 export default SmurfList;
+ */

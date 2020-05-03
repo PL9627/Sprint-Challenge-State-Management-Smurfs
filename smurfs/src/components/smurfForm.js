@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 
 const SmurfForm = (props) => {
   const [smurfForm, setsmurfForm] = useState({
@@ -56,4 +56,4 @@ const SmurfForm = (props) => {
   );
 };
 
-export default SmurfForm;
+export default SmurfForm; */
