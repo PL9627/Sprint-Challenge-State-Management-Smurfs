@@ -1,4 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { SmurfContext } from "../context/smurfContext";
+
+const SmurfForm = () => {
+  const [smurfForm, setsmurfForm] = useState({
+    name: "",
+    age: 0,
+    height: "",
+  });
+
+  const {postSmurfs} = useContext(SmurfContext);
+
+  const handleChanges = (event) => {
+    setsmurfForm({
+      ...smurfForm,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    postSmurfs(smurfForm);
+
+    event.target.reset();
+  };
+
+  return (
+      <form onSubmit={handleSubmit}>
+        <label>
+        <input
+          type="text"
+          name="name"
+          onChange={handleChanges}
+          value={smurfForm.name}
+          placeholder="Type smurf name here..."
+        />
+        </label>
+        <label>
+        <input
+          type="text"
+          name="age"
+          onChange={handleChanges}
+          value={smurfForm.age}
+          placeholder="Type smurf age here..."
+        />
+        </label>
+        <label>
+        <input
+          type="text"
+          name="height"
+          onChange={handleChanges}
+          value={smurfForm.height}
+          placeholder="Type smurf height here..."
+        />
+        </label>
+        <button type="submit">Create New Smurf</button>
+      </form>
+  );
+};
+
+export default SmurfForm;
+
+/* import React, { useState } from "react";
 import { connect } from "react-redux";
 import { postSmurf } from "../actions/smurfActions";
 
@@ -59,64 +122,6 @@ const mapStateToProps = (state) => {
     smurf: state.smurfs,
     err: state.err,
   };
-};
+}; */
 
-/* import React, { useState } from "react";
-
-const SmurfForm = (props) => {
-  const [smurfForm, setsmurfForm] = useState({
-    name: "",
-    age: "",
-    height: "",
-  });
-
-  const handleChanges = (event) => {
-    setsmurfForm({
-      ...smurfForm,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    props.addSmurf(smurfForm);
-
-    setsmurfForm({
-      name: "",
-      age: "",
-      height: "",
-    });
-  };
-
-  return (
-    <div className="smurfForm">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          onChange={handleChanges}
-          value={smurfForm.name}
-          placeholder="Type smurf name here..."
-        />
-        <input
-          type="text"
-          name="age"
-          onChange={handlesChanges}
-          value={smurfForm.age}
-          placeholder="Type smurf age here..."
-        />
-        <input
-          type="text"
-          name="height"
-          onChange={handleChanges}
-          value={smurfForm.height}
-          placeholder="Type smurf height here..."
-        />
-        <button type="submit">Create New Smurf</button>
-      </form>
-    </div>
-  );
-};*/
-
-export default connect(mapStateToProps, {postSmurf})(SmurfForm);
+/* export default connect(mapStateToProps, {postSmurf})(SmurfForm);*/

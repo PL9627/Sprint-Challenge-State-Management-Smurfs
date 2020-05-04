@@ -1,4 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { SmurfContext } from "../context/smurfContext";
+
+const SmurfList = () => {
+  const { newSmurfs } = useContext(SmurfContext);
+
+  return (
+    <div className="smurfList">
+      {newSmurfs.map((smurfs) => (
+        <div key={smurfs.id}>
+          <p>{smurfs.name}</p>
+          <p>{smurfs.age}</p>
+          <p>{smurfs.height}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default SmurfList;
+
+/* import React from "react";
 import { connect } from "react-redux";
 import { fetchSmurf } from "../actions/smurfActions";
 import SmurfCard from "./smurfCard";
@@ -21,15 +43,7 @@ const SmurfList = ({ fetchSmurf, smurfs, isFetching, err }) => {
       <div>
         <h1>Smurf Village Residents</h1>
 
-        {smurfs.map((smurf) => {
-          <SmurfCard
-            key={smurf.id}
-            smurf={smurf}
-            name={smurf.name}
-            age={smurf.age}
-            height={smurf.height}
-          />;
-        })}
+        <button></button>
       </div>
     );
   }
@@ -41,26 +55,6 @@ const mapStateToProps = (state) => {
     isFetching: state.isFetching,
     err: state.err,
   };
-};
+}; */
 
-/* import React, { useContext } from "react";
-
-import SmurfCard from "./SmurfCard";
-
-const SmurfList = () => {
-  const { smurf } = useContext(SmurfContext);
-
-  return (
-    <div className="smurfList">
-      <h1>Smurf Form</h1>
-
-      <div>
-        {smurf.map((smurfs) => (
-          <SmurfCard key={smurfs.id} smurfs={smurfs} />
-        ))}
-      </div>
-    </div>
-  );
-};*/
-
-export default connect(mapStateToProps, {fetchSmurf})(SmurfList);
+/* export default connect(mapStateToProps, {fetchSmurf})(SmurfList); */
